@@ -22,39 +22,21 @@ main = do
   let int = 3 * (2 * 2 + 1) :: Integer
 
   print "3 * (2 * 2 + 1):"
-  print ("nat: "++show nat)
+  print ("nat: "++show (natToInt nat))
   print ("float: "++show float)
   print ("int: "++show int)
 
-  print (
-      "beside (Succ Zero) (Succ (Succ Zero)): " ++
-      show (beside (Succ Zero) (Succ (Succ Zero)))
-    )
+  print ("beside 1 2: "++show (beside 1 2))
+  print ("beside 2 1: "++show (beside 2 1))
+  print ("beside 1 1: "++show (beside 1 1))
 
-  print (
-      "beside (Succ (Succ Zero)) (Succ Zero): " ++
-      show (beside (Succ (Succ Zero)) (Succ Zero))
-    )
+  print ("beside2 8 6: "++show (beside2 8 6))
+  print ("beside2 8 9: "++show (beside2 8 9))
+  print ("beside2 4 6: "++show (beside2 4 6))
 
-  print (
-      "beside (Succ Zero) (Succ Zero): " ++
-      show (beside (Succ Zero) (Succ Zero))
-    )
-
-  print (
-      "beside2 (Succ Zero) (Succ (Succ Zero)): " ++
-      show (beside2 (Succ Zero) (Succ (Succ Zero)))
-    )
-
-  print (
-      "beside2 (Succ (Succ Zero)) (Succ Zero): " ++
-      show (beside2 (Succ (Succ Zero)) (Succ Zero))
-    )
-
-  print (
-      "beside2 (Succ Zero) (Succ Zero): " ++
-      show (beside2 (Succ Zero) (Succ (Succ (Succ Zero))))
-    )
+  print ("3^4 = "++show (natToInt (pow 3 4)))
+  print ("0^2 = "++show (natToInt (pow 0 2)))
+  print ("2^0 = "++show (natToInt (pow 2 0)))
 
   let tree = Node 
         (Node 
@@ -67,20 +49,10 @@ main = do
         (Leaf 1) 
         :: BinTree Integer
 
-  print (
-    "tree = "++show tree
-    )
-
-  print (
-    "treeReverse tree = "++show (treeReverse tree)
-    )
-
-  print (
-    "treeSum tree = "++show (treeSum tree)
-    )
-
-  print (
-    "treeDepth tree = "++show (treeDepth tree)
-    )
+  print ("tree = "++show tree)
+  print ("treeReverse tree = "++show (treeReverse tree))
+  print ("treeSum tree = "++show (treeSum tree))
+  print ("treeDepth tree = "++show (natToInt (treeDepth tree)))
+  print ("treeLeaves tree = "++show (treeLeaves tree))
 
   
