@@ -38,6 +38,10 @@ beside2 _ _ = False
 
 data BinTree a = Leaf a | Node (BinTree a) (BinTree a)
 
+instance Show a => Show (BinTree a) where
+  show (Leaf a) = "Leaf " ++ show a
+  show (Node a b) = "Node (" ++ show a ++ ") (" ++ show b ++ ")"
+
 treeReverse :: BinTree a -> BinTree a
 treeReverse (Leaf a) = Leaf a
 treeReverse (Node a b) = Node (treeReverse b) (treeReverse a)

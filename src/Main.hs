@@ -56,4 +56,31 @@ main = do
       show (beside2 (Succ Zero) (Succ (Succ (Succ Zero))))
     )
 
+  let tree = Node 
+        (Node 
+          (Node 
+            (Leaf 2) 
+            (Leaf 4)
+          ) 
+          (Leaf 3)
+        ) 
+        (Leaf 1) 
+        :: BinTree Integer
+
+  print (
+    "tree = "++show tree
+    )
+
+  print (
+    "treeReverse tree = "++show (treeReverse tree)
+    )
+
+  print (
+    "treeSum tree = "++show (treeSum tree)
+    )
+
+  print (
+    "treeDepth tree = "++show (treeDepth tree)
+    )
+
   
